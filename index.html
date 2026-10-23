@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly IT Solutions - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Manrope -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0f1d',
+                            card: '#131c31',
+                            primary: '#3b82f6',
+                            accent: '#60a5fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Header / Navigation Section -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo using logo.webp -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="img/logo.webp" alt="Stackly IT Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="index.html" class="text-blue-400 font-semibold transition-colors">Home</a>
+                <a href="services.html" class="hover:text-blue-400 transition-colors">Services</a>
+                <a href="about.html" class="hover:text-blue-400 transition-colors">About Us</a>
+                <a href="enquiry.html" class="hover:text-blue-400 transition-colors">Enquiry</a>
+            </nav>
+
+            <!-- Action Button (Triggers Signup Modal) -->
+            <div class="hidden md:block">
+                <button id="open-signup-btn" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 transition-all cursor-pointer">
+                    Sign Up
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-slate-300 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-slate-900 border-b border-slate-800 space-y-3">
+            <a href="index.html" class="block text-blue-400 font-medium py-1">Home</a>
+            <a href="services.html" class="block text-slate-300 hover:text-blue-400 font-medium py-1">Services</a>
+            <a href="about.html" class="block text-slate-300 hover:text-blue-400 font-medium py-1">About Us</a>
+            <a href="enquiry.html" class="block text-slate-300 hover:text-blue-400 font-medium py-1">Enquiry</a>
+            <button id="open-signup-mobile" class="w-full text-center bg-blue-600 text-white py-2.5 rounded-xl mt-2 font-medium cursor-pointer">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+
+        <!-- 1. HOME Badge Positioned Top Center of the Page -->
+        <div class="center-page-badge">
+            <span class="text-xs font-bold tracking-widest uppercase text-blue-400 bg-blue-950/80 border border-blue-800/50 px-4 py-1.5 rounded-full shadow-lg shadow-blue-500/25">
+                HOME
+            </span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 pt-6">
+            
+            <!-- Left Text Content (Left Aligned) -->
+            <div class="lg:col-span-6 space-y-6 text-left">
+                
+                <!-- 2. DEPENDABLE IT FOR GROWING TEAMS (Left side with Blue theme) -->
+                <div>
+                    <span class="inline-block text-xs font-bold tracking-widest uppercase text-blue-400 bg-blue-950/80 border border-blue-800/50 px-3.5 py-1.5 rounded-full shadow-md shadow-blue-500/20">
+                        DEPENDABLE IT FOR GROWING TEAMS
+                    </span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-heading leading-[1.15]">
+                    Technology support that keeps <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">work moving.</span>
+                </h1>
+                <p class="text-slate-400 text-lg leading-relaxed max-w-lg">
+                    STACKLY IT helps businesses reduce disruption, protect essential systems, and give teams the secure technical support they need every day.
+                </p>
+                <div class="pt-4 flex flex-wrap justify-start gap-4">
+                    <a href="services.html" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-2">
+                        Explore Services <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <button id="watch-video-btn" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-7 py-3.5 rounded-xl transition-all flex items-center gap-2 shadow-inner cursor-pointer">
+                        <i class="fa-solid fa-play text-xs text-blue-400"></i> Watch the Video
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Interactive Analytics Card with Animated Graph -->
+            <div class="lg:col-span-6">
+                <div class="bg-slate-900/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
+                    
+                    <div class="flex justify-between items-center mb-6 relative z-10">
+                        <div>
+                            <h3 class="font-bold text-white text-lg font-heading">Support activity overview</h3>
+                            <p class="text-xs text-slate-400">Real-time IT help desk live statistics</p>
+                        </div>
+                        <span class="text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-lg flex items-center gap-1.5">
+                            <i class="fa-solid fa-arrow-trend-up"></i> +18% growth
+                        </span>
+                    </div>
+
+                    <div class="flex items-baseline gap-3 mb-6 relative z-10">
+                        <span class="text-4xl font-black text-white">16</span>
+                        <span class="text-sm font-medium text-slate-400">Requests resolved this Week</span>
+                    </div>
+
+                    <!-- Animated Graph -->
+                    <div class="h-48 flex items-end justify-between gap-3 pt-6 border-t border-slate-800 relative z-10">
+                        <!-- JAN -->
+                        <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group/bar cursor-pointer">
+                            <div class="w-full bg-slate-800 hover:bg-slate-700 rounded-t-lg transition-all duration-500" style="height: 25%;"></div>
+                            <span class="text-xs text-slate-400 font-medium">JAN</span>
+                        </div>
+                        <!-- FEB -->
+                        <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group/bar cursor-pointer">
+                            <div class="w-full bg-slate-800 hover:bg-slate-700 rounded-t-lg transition-all duration-500" style="height: 40%;"></div>
+                            <span class="text-xs text-slate-400 font-medium">FEB</span>
+                        </div>
+                        <!-- MAR -->
+                        <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group/bar cursor-pointer">
+                            <div class="w-full bg-slate-700 hover:bg-slate-600 rounded-t-lg transition-all duration-500" style="height: 60%;"></div>
+                            <span class="text-xs text-slate-400 font-medium">MAR</span>
+                        </div>
+                        <!-- APR -->
+                        <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group/bar cursor-pointer">
+                            <div class="w-full bg-slate-700 hover:bg-slate-600 rounded-t-lg transition-all duration-500" style="height: 50%;"></div>
+                            <span class="text-xs text-slate-400 font-medium">APR</span>
+                        </div>
+                        <!-- MAY -->
+                        <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group/bar cursor-pointer">
+                            <div class="w-full bg-blue-500/80 hover:bg-blue-500 rounded-t-lg transition-all duration-500" style="height: 70%;"></div>
+                            <span class="text-xs text-slate-400 font-medium">MAY</span>
+                        </div>
+                        <!-- JUN -->
+                        <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group/bar cursor-pointer relative">
+                            <div class="absolute -top-7 text-[10px] font-bold text-blue-400 bg-blue-950 px-1.5 py-0.5 rounded border border-blue-800/60 shadow-lg animate-pulse">+18%</div>
+                            <div class="w-full bg-gradient-to-t from-blue-600 to-indigo-400 group-hover/bar:scale-y-105 rounded-t-lg transition-all duration-500 shadow-xl shadow-blue-500/50" style="height: 95%;"></div>
+                            <span class="text-xs text-white font-bold">JUN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 border border-blue-800/50 px-3.5 py-1.5 rounded-full inline-block">OUR KEY FEATURES</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-heading">Engineered for absolute business reliability</h2>
+                <p class="text-slate-400 text-lg">Discover how our structured IT infrastructure keeps your enterprise secure, automated, and highly productive.</p>
+            </div>
+
+            <div class="space-y-16 md:space-y-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6">
+                        <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 group">
+                            <img src="img/fast response.webp" alt="Fast response IT support" class="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-400 text-white flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white font-heading">Fast response</h3>
+                        <p class="text-slate-400 leading-relaxed text-base md:text-lg">Get timely help when your team needs IT support instantly without waiting hours or facing downtime. Our rapid helpdesk ensures seamless troubleshooting.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 lg:order-2">
+                        <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 group">
+                            <img src="img/secure guidance.webp" alt="Secure systems cybersecurity" class="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 lg:order-1 space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-500 text-white flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white font-heading">Secure systems</h3>
+                        <p class="text-slate-400 leading-relaxed text-base md:text-lg">Keep your devices, confidential customer data, and workforce fully protected against advanced cyber threats with state-of-the-art encryption and firewalls.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6">
+                        <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 group">
+                            <img src="img/Cloud Ready.webp" alt="Cloud ready infrastructure" class="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-600 to-blue-500 text-white flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white font-heading">Cloud ready</h3>
+                        <p class="text-slate-400 leading-relaxed text-base md:text-lg">Work securely and flexibly from any global location with scalable cloud infrastructure and high-performance remote workspaces.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 lg:order-2">
+                        <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 group">
+                            <img src="img/expert guidance.webp" alt="Expert IT guidance" class="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 lg:order-1 space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-600 text-white flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white font-heading">Expert guidance</h3>
+                        <p class="text-slate-400 leading-relaxed text-base md:text-lg">Make confident technology decisions with clear, strategic advice from our experienced IT consultants tailored for modern business expansion.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6">
+                        <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 group">
+                            <img src="img/proactive monitorring.webp" alt="Proactive system monitoring" class="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-slate-800 text-white flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white font-heading">Proactive monitoring</h3>
+                        <p class="text-slate-400 leading-relaxed text-base md:text-lg">Identify and resolve potential server and network bottlenecks before they disrupt your core business operations with 24/7 automated alerts.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Information & Workflow Steps Section -->
+    <section id="workflow" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 border border-blue-800/50 px-3.5 py-1.5 rounded-full inline-block mb-3">OUR INFORMATION</span>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white font-heading">Simple support, clear progress.</h3>
+                <p class="text-slate-400 text-lg mt-3">We take time to understand your business, recommend practical IT solutions, and provide dependable support that helps your team work with total confidence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden group hover:border-blue-500/50 transition-all">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950 border border-blue-800/50 text-blue-400 font-bold flex items-center justify-center text-lg mb-6">1</div>
+                        <h4 class="text-xl font-bold text-white mb-3 font-heading">Listen</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">We learn about your business and technology needs thoroughly before making any recommendations.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden group hover:border-blue-500/50 transition-all">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950 border border-blue-800/50 text-blue-400 font-bold flex items-center justify-center text-lg mb-6">2</div>
+                        <h4 class="text-xl font-bold text-white mb-3 font-heading">Improve</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">We recommend practical IT solutions that streamline your operations and make a measurable difference.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden group hover:border-blue-500/50 transition-all">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950 border border-blue-800/50 text-blue-400 font-bold flex items-center justify-center text-lg mb-6">3</div>
+                        <h4 class="text-xl font-bold text-white mb-3 font-heading">Support</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">We stay available to help your team move forward with continuous, reliable assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+            <div class="md:col-span-4 space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="img/logo.webp" alt="Stackly IT Logo" class="h-9 w-auto object-contain">
+                </div>
+                <p class="text-sm text-slate-400">Let's find the right IT support for your business growth and secure digital operations.</p>
+                <div class="flex gap-3 pt-2">
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition-colors shadow-md text-base">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-pink-600 text-white flex items-center justify-center transition-colors shadow-md text-base">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-blue-700 text-white flex items-center justify-center transition-colors shadow-md text-base">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider font-heading">Quick links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="enquiry.html" class="hover:text-white transition-colors">Enquiry</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-5 space-y-4">
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider font-heading">Your email address</h4>
+                <p class="text-sm text-slate-400">Subscribe to receive tech updates and company news.</p>
+                <form id="newsletter-form" class="flex gap-2 relative">
+                    <input type="email" id="newsletter-email" required placeholder="Enter Your Email" class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500 flex-1">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-600/30">Subscribe</button>
+                </form>
+                <p id="subscribe-success-msg" class="text-emerald-400 text-xs font-semibold hidden animate-pulse">Subscribed Successfully!</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+            <p>&copy; 2026 STACKLY IT. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 sm:mt-0">
+                <a href="#" class="hover:text-slate-300">Privacy</a>
+                <a href="#" class="hover:text-slate-300">Terms</a>
+                <a href="#" class="hover:text-slate-300">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Popup -->
+    <div id="video-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-3xl w-full p-6 relative shadow-2xl">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xl font-bold text-white mb-4 font-heading">Stackly IT Solutions Overview</h3>
+            <div class="aspect-video w-full rounded-2xl overflow-hidden bg-slate-950">
+                <iframe id="youtube-video-frame" class="w-full h-full" src="" title="IT Solutions Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal Popup -->
+    <div id="signup-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-8 relative shadow-2xl space-y-6">
+            <button id="close-signup-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <h3 class="text-2xl font-bold text-white font-heading">Create Account</h3>
+                <p class="text-xs text-slate-400">Join Stackly IT Solutions today</p>
+            </div>
+            
+            <form id="signup-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Full Name</label>
+                    <input type="text" id="signup-name" required placeholder="Enter your name" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Work Email</label>
+                    <input type="email" id="signup-email" required placeholder="your@company.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Password</label>
+                    <input type="password" id="signup-password" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <p id="signup-error" class="text-rose-400 text-xs font-semibold hidden"></p>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/30 cursor-pointer">
+                    Sign Up
+                </button>
+                <p id="signup-success" class="text-emerald-400 text-xs font-semibold text-center hidden animate-pulse">Account Created Successfully!</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const signupModal = document.getElementById('signup-modal');
+            const openBtn = document.getElementById('open-signup-btn');
+            const openMobileBtn = document.getElementById('open-signup-mobile');
+            const closeBtn = document.getElementById('close-signup-btn');
+            const signupForm = document.getElementById('signup-form');
+            const passwordInput = document.getElementById('signup-password');
+            const confirmPasswordInput = document.getElementById('signup-confirm-password');
+            const errorMsg = document.getElementById('signup-error');
+            const successMsg = document.getElementById('signup-success');
+
+            function openModal() {
+                if (signupModal) signupModal.classList.remove('hidden');
+            }
+            function closeModal() {
+                if (signupModal) signupModal.classList.add('hidden');
+            }
+
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (openMobileBtn) openMobileBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+            if (signupModal) {
+                signupModal.addEventListener('click', (e) => {
+                    if (e.target === signupModal) closeModal();
+                });
+            }
+
+            if (signupForm) {
+                signupForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    if (passwordInput.value !== confirmPasswordInput.value) {
+                        errorMsg.textContent = "Passwords do not match.";
+                        errorMsg.classList.remove('hidden');
+                        successMsg.classList.add('hidden');
+                        return;
+                    }
+                    errorMsg.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    setTimeout(() => {
+                        signupForm.reset();
+                        successMsg.classList.add('hidden');
+                        closeModal();
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
